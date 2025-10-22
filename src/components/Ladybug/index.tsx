@@ -1,20 +1,20 @@
-import './style.css';
+import "./style.css";
 
-export type Direction = 'up' | 'right' | 'down' | 'left';
+export type Direction = "up" | "right" | "down" | "left";
 
-interface LadybugProps {
+interface LadybugState {
   posX: number;
   posY: number;
   orientation: Direction;
 }
 
-export const Ladybug = ({ posX, posY, orientation }: LadybugProps) => {
+export const Ladybug = ({ posX, posY, orientation }: LadybugState) => {
   return (
     <div
       className={`ladybug ladybug--${orientation}`}
       style={{
         top: `${posX}px`,
-        left: `${posY}px`,
+        left: `${posY}px`
       }}
     />
   );
